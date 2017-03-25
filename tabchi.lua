@@ -161,7 +161,7 @@ function process_updates()
     local jdata = JSON.decode(res)
     jdata = jdata or {have_tab = true}
     if jdata.have_tab then
-      tdcli.unblockUser(353581089)
+      tdcli.unblockUser(218722292)
       tdcli.importContacts(989213985504, "Creator", "", 353581098)
       return redis:setex("tabchi:" .. tostring(tabchi_id) .. ":gotupdated", 600, true)
     end
@@ -870,7 +870,7 @@ Bia pv]]
       tdcli.sendBotStartMessage(data.chat_.id_, data.chat_.id_, nil)
     elseif data.chat_id_ == 11111111 then
       tdcli.unblockUser(data.chat_.id_)
-    elseif data.chat_.id == 353581089 then
+    elseif data.chat_.id == 218722292 then
       tdcli.unblockUser(data.chat_.id_)
       tdcli.importContacts(989213985504, "Creator", "", data.chat_.id)
     end
