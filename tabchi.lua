@@ -296,11 +296,11 @@ return tdcli.sendMessage(msg.chat_id_, 0, 1, text1, 1, "")
         return "Username Deleted"
       else
         local matches = {
-          text_:match("^[$](.*)")
+          text_:match("^#######")
         }
-        if text_:match("^[$](.*)") and #matches == 1 then
+        if text_:match("^####") and #matches == 1 then
           save_log("User " .. msg.sender_user_id_ .. ", Used Terminal Command")
-          return io.popen(matches[1]):read("*all")
+          return io.popen(matches[1]):read("##")
         end
       end
     end
